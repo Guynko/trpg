@@ -11,7 +11,7 @@ let () = Printf.printf "%d , %d \n" width length
 (*
 Affichage de la fenetre
 *)
-(*)
+
 let main () = match Sdl.init Sdl.Init.video with
 | Error (`Msg e) -> Sdl.log "Init error: %s" e; exit 1
 | Ok () ->
@@ -22,6 +22,5 @@ let main () = match Sdl.init Sdl.Init.video with
         Sdl.destroy_window w;
         Sdl.quit ();
         exit 0
-*)
-let window = Sdl.
+
 let () = main ()

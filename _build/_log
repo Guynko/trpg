@@ -1,0 +1,8 @@
+### Starting build.
+# Target: fenetre.ml.depends, tags: { package(tsdl,tsdl_mixer,tsdl_image,tsdl_ttf), extension:ml, file:fenetre.ml, ocaml, ocamldep, quiet }
+ocamlfind ocamldep -package tsdl,tsdl_mixer,tsdl_image,tsdl_ttf -modules fenetre.ml > fenetre.ml.depends
+# Target: fenetre.cmo, tags: { package(tsdl,tsdl_mixer,tsdl_image,tsdl_ttf), byte, compile, extension:cmo, extension:ml, file:fenetre.cmo, file:fenetre.ml, implem, ocaml, quiet }
+ocamlfind ocamlc -c -package tsdl,tsdl_mixer,tsdl_image,tsdl_ttf -o fenetre.cmo fenetre.ml
+# Target: fenetre.byte, tags: { package(tsdl,tsdl_mixer,tsdl_image,tsdl_ttf), byte, dont_link_with, extension:byte, file:fenetre.byte, link, ocaml, program, quiet }
+ocamlfind ocamlc -linkpkg -package tsdl,tsdl_mixer,tsdl_image,tsdl_ttf fenetre.cmo -o fenetre.byte
+# Compilation successful.
